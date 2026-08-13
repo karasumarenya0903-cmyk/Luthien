@@ -1,10 +1,10 @@
-# Luthien / Arkpets Desktop Pets
+<img width="1508" height="996" alt="image" src="https://github.com/user-attachments/assets/72639b21-5dcb-4a00-a384-5bd883e77e08" /># Luthien / Arkpets Desktop Pets
 
-一个支持多角色的透明 Windows 桌宠程序。内置桌宠包括 Angelina the Mellow Wish、Lemuen 和 Amiya — Apprentice Connector。
+一个支持明日方舟多角色的 Windows 桌宠程序。内置桌宠干员包括初始的予愿安洁莉娜、蕾缪安和阿米娅·见习联结者，用户也可自行导入自己喜欢的干员当桌宠。
 
 ## 下载与运行
 
-普通用户无需安装 ChatGPT、Codex、Node.js，也不需要 OpenAI 账号或 API Key。请前往本仓库的 [**Releases**](https://github.com/karasumarenya0903-cmyk/Luthien/releases/latest) 页面下载对应系统的安装包：
+用户无需安装 ChatGPT、Codex、Node.js，也不需要 OpenAI 账号或 API Key。请前往本仓库的 [**Releases**](https://github.com/karasumarenya0903-cmyk/Luthien/releases/latest) 页面下载对应系统的安装包：
 
 - Windows 64 位：下载 `Arkpets.Desktop.Pets.exe`，双击即可运行，无需安装。
 本项目目前仅支持 Windows 10/11 64 位，不提供 macOS 版本。
@@ -13,15 +13,21 @@
 
 ## 操作方式
 
-- 单击桌宠：播放 `interact`，然后平滑回到默认的 `relax`。
-- 双击桌宠：角色包含 `special` 时播放特殊动作，然后平滑回到 `relax`。
+- 单击桌宠：戳一下干员，播放 `interact`，然后回到`relax`。
+- 双击桌宠：触发有时装干员的时装专属动作，仅在干员包含 `special` 时播放特殊动作，然后回到`relax`。
 - 右键桌宠：切换 `relax`、`sit`、`sleep`、`move`，或切换角色、导入/删除自定义桌宠。
 - `move` 模式：桌宠跟随鼠标；单击会在原地退出并回到 `relax`。
 - `WASD`：在 `move` 模式中控制方向；按住 `Shift` 加速。
 
 ## 用户导入桌宠
 
-导入时需要选择文件名中分别包含 `Relax`、`Interact`、`Sit`、`Sleep`、`Move` 的五个 WebM 文件；`Special` 为可选文件。用户导入的角色可以在选择面板中删除，内置角色不可删除。
+用户可以自行前往明日方舟中文 Wiki 下载想导入干员模型的 WebM 文件。网址：https://prts.wiki/w/%E9%A6%96%E9%A1%B5
+
+以予愿安洁莉娜为例，在“干员模型”中选择“基建”模型组，下载 `Relax`、`Interact`、`Sit`、`Sleep`、`Move` 的五个 WebM 文件；若下载的是某干员的时装模型，可以选择多下载一个名为`Special`的 WebM 文件，无需重命名文件。
+
+![Uploading image.png…]()
+
+导入时需要选择文件名中分别包含 `Relax`、`Interact`、`Sit`、`Sleep`、`Move` 的五个 WebM 文件；`Special` 为可选文件。用户导入的干员可以在选择面板中删除，内置干员不可删除。
 
 ## 本地开发
 
