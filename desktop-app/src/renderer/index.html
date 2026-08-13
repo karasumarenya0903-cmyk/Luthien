@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' file:; script-src 'self'; style-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkpets Desktop Pet</title>
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <main id="pet-stage" aria-label="Desktop pet">
+      <video id="pet-video-a" class="pet-video" muted playsinline draggable="false"></video>
+      <video id="pet-video-b" class="pet-video" muted playsinline draggable="false"></video>
+      <div id="error-message" role="alert" hidden></div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
+

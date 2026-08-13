@@ -1,0 +1,86 @@
+{
+  "name": "arkpets-desktop-pets",
+  "version": "3.2.0",
+  "description": "A multi-pet transparent Windows and macOS desktop companion.",
+  "main": "src/main.js",
+  "author": "Arkpets",
+  "license": "UNLICENSED",
+  "private": true,
+  "packageManager": "pnpm@11.16.0",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test --test-isolation=none test/runtime-utils.test.js",
+    "verify:assets": "node scripts/verify-assets.js",
+    "verify:media": "electron scripts/media-qa-main.js",
+    "dist": "pnpm run dist:win",
+    "dist:win": "pnpm run verify:assets && pnpm run test && electron-builder --win portable",
+    "dist:mac": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --x64 --arm64",
+    "dist:mac:arm64": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --arm64",
+    "dist:mac:x64": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --x64"
+  },
+  "build": {
+    "appId": "com.arkpets.desktop-pets",
+    "productName": "Arkpets Desktop Pets",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "../pets/catalog.json",
+        "to": "pets/catalog.json"
+      },
+      {
+        "from": "../pets/characters",
+        "to": "pets/characters",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-${version}-macOS-${arch}.${ext}",
+      "category": "public.app-category.entertainment",
+      "minimumSystemVersion": "12.0",
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.inherit.plist",
+      "notarize": true
+    }
+  },
+  "devDependencies": {
+    "electron": "43.3.0",
+    "electron-builder": "26.15.3"
+  }
+}

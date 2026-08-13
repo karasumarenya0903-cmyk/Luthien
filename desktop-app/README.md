@@ -1,0 +1,50 @@
+# Arkpets Desktop Pets
+
+一个可容纳多个透明 WebM 桌宠的 Windows/macOS 启动器。启动后先选择角色；桌宠运行时可通过右键菜单切换另一只宠物。
+
+## 当前角色
+
+- Angelina the Mellow Wish（予愿安洁莉娜）
+- Lemuen（蕾缪安）
+- Amiya — Apprentice Connector（阿米娅·见习联结者，含 `special`）
+
+## 操作
+
+- 左键：播放一次 `interact`，随后以连续遮罩关键帧回到 `relax`
+- 双击左键：角色含 `special` 时播放一次，随后同样平滑回到 `relax`
+- 右键：选择 `relax`、`sit`、`sleep` 或 `move`，也可切换桌宠或退出
+- `move`：自动跟随鼠标
+- `move` 中左键桌宠：在当前位置退出移动并回到 `relax`
+- `move` 中 WASD：键盘控制移动
+- Shift + WASD：2 倍速度
+
+## 用户导入
+
+选择器中的“导入桌宠”可一次选择五个基础 WebM，并可额外选择一个 `Special`。文件名必须分别包含
+`Relax`、`Interact`、`Sit`、`Sleep`、`Move`；可选文件名包含 `Special`。程序会验证文件头和完整动作集合，
+然后保存在当前 Windows 用户的应用数据目录中。
+用户导入的角色卡片右上角带“删除”按钮；确认后会删除其五个或六个 WebM 并显示释放的空间。
+内置桌宠不可删除。
+选择器会从每只桌宠的 `relax` 动画中段生成透明静态图标，生成后释放视频解码器，
+避免桌宠数量较多时选择面板持续占用额外内存。
+
+## 切换关键帧
+
+普通模式切换会冻结旧动作当前帧并预解码新动作首帧，然后执行 220ms 的收缩/替换/舒展关键帧。
+`interact` 返回 `relax` 时则使用 560ms、七个阶段的互补遮罩关键帧：互动末帧逐段让位给
+默认动作首帧，整个过渡都保持完整覆盖，避免中点硬切和透明空帧。
+`special` 的进入与返回沿用同一套衔接。Move 状态则在左键按下时立即停止，避免跟随鼠标
+导致按下和松开不在同一位置、浏览器丢失 `click` 的情况。
+
+## 分享
+
+内置的 Angelina、Lemuen 和 Amiya 已封装在对应平台安装包中。Windows 用户使用便携 EXE；
+Mac 用户根据芯片使用 arm64 或 x64 DMG。用户后来导入的桌宠保存在本机应用数据中，
+不会自动写回安装包；分享自定义桌宠时还需同时分享五个基础 WebM，以及可选的 Special。
+
+## macOS 构建
+
+Mac 版要求 macOS 12 或更高版本，分别为 Apple Silicon `arm64` 和 Intel `x64` 生成 DMG/ZIP。
+构建、签名、公证及 GitHub Actions 使用方法见 [MACOS-BUILD.md](MACOS-BUILD.md)。
+
+面向用户的宣传文案和下载教程位于项目的 `release/` 文件夹。

@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "petId": "amiya-apprentice-connector",
+  "displayName": "Amiya — Apprentice Connector",
+  "initialMode": "relax",
+  "baseModeCycle": [
+    "relax",
+    "sit",
+    "sleep",
+    "move"
+  ],
+  "states": {
+    "sit": { "asset": "assets/source-webm/sit.webm", "loop": true },
+    "sleep": { "asset": "assets/source-webm/sleep.webm", "loop": true },
+    "relax": { "asset": "assets/source-webm/relax.webm", "loop": true },
+    "move": { "asset": "assets/source-webm/move.webm", "loop": true },
+    "interact": {
+      "asset": "assets/source-webm/interact.webm",
+      "loop": false,
+      "returnToMode": "relax"
+    },
+    "special": {
+      "asset": "assets/source-webm/special.webm",
+      "loop": false,
+      "returnToMode": "relax"
+    }
+  },
+  "input": {
+    "leftClick": {
+      "sequence": [
+        "play-interact-once",
+        "return-to-relax"
+      ],
+      "returnMode": "relax"
+    },
+    "doubleLeftClick": {
+      "sequence": [
+        "play-special-once",
+        "return-to-relax"
+      ],
+      "returnMode": "relax"
+    },
+    "moveMode": {
+      "followPointer": true,
+      "keyboard": {
+        "up": "KeyW",
+        "left": "KeyA",
+        "down": "KeyS",
+        "right": "KeyD",
+        "accelerationModifier": [
+          "ShiftLeft",
+          "ShiftRight"
+        ],
+        "accelerationMultiplier": 2.0,
+        "whileDirectionalKeyHeld": "keyboard-overrides-pointer-follow",
+        "onDirectionalKeyRelease": "resume-pointer-follow"
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "petId": "angelina-the-mellow-wish",
+  "displayName": "Angelina the Mellow Wish",
+  "characterName": "予愿安洁莉娜",
+  "sourceSet": "默认-基建-x1",
+  "assets": [
+    {
+      "state": "interact",
+      "path": "assets/source-webm/interact.webm",
+      "originalName": "予愿安洁莉娜-默认-基建-Interact-x1.webm",
+      "bytes": 1323778,
+      "sha256": "8F96D8A6085EC9E8364F945A57F9F5953C46C814D93927A1810267DD5F9DED7C",
+      "playback": "once",
+      "usable": true,
+      "validationNote": "Copied byte-for-byte; media-level visual QA pending."
+    },
+    {
+      "state": "sit",
+      "path": "assets/source-webm/sit.webm",
+      "originalName": "予愿安洁莉娜-默认-基建-Sit-x1.webm",
+      "bytes": 913695,
+      "sha256": "D05ABEA55C7D6230B3347EDCC5A81DA0A069B38659F8DC8E7CDF842C360A9E19",
+      "playback": "loop",
+      "usable": true,
+      "validationNote": "Copied byte-for-byte; media-level visual QA pending."
+    },
+    {
+      "state": "sleep",
+      "path": "assets/source-webm/sleep.webm",
+      "originalName": "予愿安洁莉娜-默认-基建-Sleep-x1.webm",
+      "bytes": 914419,
+      "sha256": "318FD9ECD0E637BC46EEBE562A4830A469C99D67FEC741BB3620E2C28EA2AEDB",
+      "playback": "loop",
+      "usable": true,
+      "validationNote": "Copied byte-for-byte; media-level visual QA pending."
+    },
+    {
+      "state": "relax",
+      "path": "assets/source-webm/relax.webm",
+      "originalName": "予愿安洁莉娜-默认-基建-Relax-x1.webm",
+      "bytes": 1443815,
+      "sha256": "E2D8CCC05327845F9A97CDB3F39F6404C30ECE08D48CE04948CE00D6CEC7A5C3",
+      "playback": "loop",
+      "usable": true,
+      "validationNote": "Copied byte-for-byte; media-level visual QA pending."
+    },
+    {
+      "state": "move",
+      "path": "assets/source-webm/move.webm",
+      "originalName": "予愿安洁莉娜-默认-基建-Move-x1.webm",
+      "bytes": 279616,
+      "sha256": "814BFBE3860E036C015B5E0182922ABD2152B5C8E6CB4231CBA5981B24E1C881",
+      "playback": "loop",
+      "usable": true,
+      "validationNote": "Copied byte-for-byte; media-level visual QA pending."
+    }
+  ]
+}

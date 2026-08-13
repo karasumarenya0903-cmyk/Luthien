@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "petId": "amiya-apprentice-connector",
+  "displayName": "Amiya — Apprentice Connector",
+  "characterName": "阿米娅·见习联结者",
+  "sourceSet": "见习联结者-基建-x1",
+  "assets": [
+    {
+      "state": "relax",
+      "path": "assets/source-webm/relax.webm",
+      "originalName": "阿米娅-见习联结者-基建-Relax-x1.webm",
+      "bytes": 266618,
+      "sha256": "788ED33E3CCEAD86AA1DFD7989573F95CBAA2DF5BE10FF99A3EBE51D75E3DCC7",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "interact",
+      "path": "assets/source-webm/interact.webm",
+      "originalName": "阿米娅-见习联结者-基建-Interact-x1.webm",
+      "bytes": 993960,
+      "sha256": "0A2589CCEE48A6EC8E1905C78A5CB5B95F997D256C9403B74EF581A8A036D55A",
+      "playback": "once",
+      "usable": true
+    },
+    {
+      "state": "special",
+      "path": "assets/source-webm/special.webm",
+      "originalName": "阿米娅-见习联结者-基建-Special-x1.webm",
+      "bytes": 1878765,
+      "sha256": "E40B89B17D932417F235638DCDE44DDCF63ECFAA410A98AA6C08ADB506CFB08C",
+      "playback": "once",
+      "usable": true
+    },
+    {
+      "state": "sit",
+      "path": "assets/source-webm/sit.webm",
+      "originalName": "阿米娅-见习联结者-基建-Sit-x1.webm",
+      "bytes": 2794596,
+      "sha256": "84DC157867DC59C5D35C40A8ED70C65F0F201BD20A5DE62B5EEEC6DCD87501E4",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "sleep",
+      "path": "assets/source-webm/sleep.webm",
+      "originalName": "阿米娅-见习联结者-基建-Sleep-x1.webm",
+      "bytes": 987956,
+      "sha256": "A3C5B399727A6D8BA078DDFB4559BCDA31C3DE18C0200BDBCBF46E11C362BBED",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "move",
+      "path": "assets/source-webm/move.webm",
+      "originalName": "阿米娅-见习联结者-基建-Move-x1.webm",
+      "bytes": 423911,
+      "sha256": "9398FCE3FB9C206724421E3DBF7D2C493C124A175650415CBB9AFA3D10D7DBBA",
+      "playback": "loop",
+      "usable": true
+    }
+  ]
+}

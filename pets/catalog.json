@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "pets": [
+    {
+      "id": "angelina-the-mellow-wish",
+      "displayName": "Angelina the Mellow Wish",
+      "characterName": "予愿安洁莉娜",
+      "libraryPath": "characters/angelina-the-mellow-wish",
+      "status": "runnable-windows",
+      "packagePath": "packages/arkpets-desktop-pets/Arkpets Desktop Pets.exe",
+      "missingOrInvalid": []
+    },
+    {
+      "id": "lemuen",
+      "displayName": "Lemuen",
+      "characterName": "蕾缪安",
+      "libraryPath": "characters/lemuen",
+      "status": "runnable-windows",
+      "packagePath": "packages/arkpets-desktop-pets/Arkpets Desktop Pets.exe",
+      "missingOrInvalid": []
+    },
+    {
+      "id": "amiya-apprentice-connector",
+      "displayName": "Amiya — Apprentice Connector",
+      "characterName": "阿米娅·见习联结者",
+      "libraryPath": "characters/amiya-apprentice-connector",
+      "status": "runnable-windows",
+      "packagePath": "packages/arkpets-desktop-pets/Arkpets Desktop Pets.exe",
+      "missingOrInvalid": []
+    }
+  ]
+}

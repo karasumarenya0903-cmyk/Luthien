@@ -1,0 +1,63 @@
+:root {
+  color-scheme: dark;
+  background: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+html,
+body,
+#pet-stage {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
+#pet-stage {
+  position: relative;
+  cursor: pointer;
+}
+
+.pet-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: transparent;
+  opacity: 0;
+  transform-origin: 50% 82%;
+  pointer-events: none;
+}
+
+.pet-video.is-active {
+  opacity: 1;
+}
+
+body[data-mode="move"] #pet-stage {
+  cursor: move;
+}
+
+#error-message {
+  position: absolute;
+  inset: auto 12px 12px;
+  z-index: 5;
+  padding: 8px 10px;
+  color: #fff;
+  background: rgba(130, 20, 30, 0.9);
+  border-radius: 8px;
+  font-size: 12px;
+  text-align: center;
+  pointer-events: none;
+}

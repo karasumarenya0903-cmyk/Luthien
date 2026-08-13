@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; media-src 'self' file:; script-src 'self'; style-src 'self'">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择桌宠</title>
+    <link rel="stylesheet" href="selector.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <p class="eyebrow">ARKPETS</p>
+        <h1>选择一只桌宠</h1>
+        <p class="subtitle">之后可在桌宠右键菜单中随时切换。</p>
+      </div>
+      <button id="close-button" class="close" type="button" aria-label="关闭">×</button>
+    </header>
+    <main id="pet-list" aria-live="polite"></main>
+    <footer>
+      <button id="import-button" class="import-button" type="button">＋ 导入桌宠</button>
+      <p id="import-status" role="status">五个基础 WebM；Special 是可选的双击动作。</p>
+    </footer>
+    <script src="selector.js"></script>
+  </body>
+</html>

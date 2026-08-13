@@ -1,0 +1,190 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #10141f;
+  color: #f7f8fc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 32px 32px;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(219, 109, 79, 0.18), transparent 34%),
+    radial-gradient(circle at 90% 90%, rgba(108, 122, 255, 0.18), transparent 38%),
+    #10141f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  -webkit-app-region: drag;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+  color: #ff9475;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 9px 0 0;
+  color: #aeb7ca;
+  font-size: 13px;
+}
+
+.close {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  color: #c9cfdb;
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 23px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.close:hover { background: rgba(255, 255, 255, 0.14); }
+
+#pet-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.pet-card {
+  position: relative;
+  min-height: 190px;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 18px;
+  color: inherit;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025));
+  transition: transform 150ms ease, border-color 150ms ease, background 150ms ease;
+  overflow: hidden;
+}
+
+.pet-card:hover,
+.pet-card:focus-within {
+  transform: translateY(-3px);
+  border-color: rgba(255, 148, 117, 0.7);
+  background: linear-gradient(145deg, rgba(255, 148, 117, 0.16), rgba(255, 255, 255, 0.04));
+  outline: none;
+}
+
+.pet-launch {
+  width: 100%;
+  min-height: 190px;
+  padding: 20px;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pet-launch:focus-visible {
+  outline: 2px solid #ff9475;
+  outline-offset: -3px;
+}
+
+.delete-pet {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  z-index: 2;
+  padding: 6px 10px;
+  border: 1px solid rgba(255, 135, 135, 0.35);
+  border-radius: 9px;
+  color: #ffc0c0;
+  background: rgba(86, 18, 26, 0.72);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.delete-pet:hover { background: rgba(139, 29, 42, 0.9); }
+.delete-pet:disabled { opacity: 0.55; cursor: wait; }
+
+.pet-mark {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(255, 148, 117, 0.16);
+}
+
+.pet-mark video,
+.pet-mark .pet-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.18);
+  pointer-events: none;
+}
+
+.pet-mark.is-unavailable::after {
+  content: "?";
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 30px;
+}
+
+.pet-card h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.pet-card p {
+  margin: 7px 0 0;
+  color: #aeb7ca;
+  font-size: 13px;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.import-button {
+  min-width: 130px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 11px;
+  color: #edf0f7;
+  background: rgba(255, 255, 255, 0.07);
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.import-button:hover { background: rgba(255, 255, 255, 0.13); }
+.import-button:disabled { opacity: 0.55; cursor: wait; }
+
+#import-status {
+  margin: 0;
+  color: #aeb7ca;
+  font-size: 12px;
+}
+
+#import-status.is-error { color: #ff9c9c; }

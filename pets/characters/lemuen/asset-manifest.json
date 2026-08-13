@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "petId": "lemuen",
+  "displayName": "Lemuen",
+  "characterName": "蕾缪安",
+  "sourceSet": "默认-基建-x1",
+  "assets": [
+    {
+      "state": "relax",
+      "path": "assets/source-webm/relax.webm",
+      "originalName": "蕾缪安-默认-基建-Relax-x1.webm",
+      "bytes": 1384262,
+      "sha256": "187D96CD0186CCAAA6843488223B879D222355F1DC13D4B5243AF8CC890DE9BA",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "interact",
+      "path": "assets/source-webm/interact.webm",
+      "originalName": "蕾缪安-默认-基建-Interact-x1.webm",
+      "bytes": 1288353,
+      "sha256": "DC7E0DA958C786F1DB8C380DFE1A986593EA1701D508292A1A2D4B4A113F1552",
+      "playback": "once",
+      "usable": true
+    },
+    {
+      "state": "sit",
+      "path": "assets/source-webm/sit.webm",
+      "originalName": "蕾缪安-默认-基建-Sit-x1.webm",
+      "bytes": 1390175,
+      "sha256": "8437B29F205ABAEA6B493513C8892580D44EC258032814DEC86BE849C4F589E2",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "sleep",
+      "path": "assets/source-webm/sleep.webm",
+      "originalName": "蕾缪安-默认-基建-Sleep-x1.webm",
+      "bytes": 1522485,
+      "sha256": "D992416A07760892C6A7ED23D38811AF30417490F2FD8E58AA6712887256BF22",
+      "playback": "loop",
+      "usable": true
+    },
+    {
+      "state": "move",
+      "path": "assets/source-webm/move.webm",
+      "originalName": "蕾缪安-默认-基建-Move-x1.webm",
+      "bytes": 724195,
+      "sha256": "D0B10428115AF99952241CFB37A7E6367F0AF52275C94547C3F114482116E6EA",
+      "playback": "loop",
+      "usable": true
+    }
+  ]
+}
+

@@ -1,0 +1,25 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+
+# Build and QA output
+dist/
+desktop-app/qa/
+*.log
+*.blockmap
+latest*.yml
+
+# Distributable binaries belong in GitHub Releases
+*.exe
+*.dmg
+*.zip
+
+# Local environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
