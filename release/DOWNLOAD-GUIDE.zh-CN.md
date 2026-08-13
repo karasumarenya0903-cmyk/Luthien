@@ -6,14 +6,10 @@ Arkpets 是独立桌面程序，不需要安装 ChatGPT、Codex、Node.js 或其
 
 正式下载页：[GitHub Releases](https://github.com/karasumarenya0903-cmyk/Luthien/releases/latest)
 
-请只从作者的正式发布页下载，并核对该版本公布的 SHA-256。不同平台的文件不能混用：
+请只从作者的正式发布页下载，并核对该版本公布的 SHA-256：
 
 - Windows 10/11 64 位：下载 `.exe`
-- Apple Silicon Mac（M1、M2、M3、M4 等）：下载文件名含 `arm64` 的 `.dmg`
-- Intel Mac：下载文件名含 `x64` 的 `.dmg`
-
-Mac 用户可点击左上角苹果图标 →“关于本机”：显示“芯片 Apple M…”就选 arm64；
-显示“处理器 Intel…”就选 x64。Mac 版要求 macOS 12 Monterey 或更高版本。
+- 本项目目前不支持 macOS、Linux 或移动设备
 
 ## Windows 安装
 
@@ -29,24 +25,6 @@ Windows 校验 SHA-256（PowerShell）：
 ```powershell
 Get-FileHash -Algorithm SHA256 -LiteralPath "C:\下载位置\Arkpets.Desktop.Pets.exe"
 ```
-
-## macOS 安装
-
-1. 根据芯片下载 `arm64.dmg` 或 `x64.dmg`。
-2. 双击打开 DMG。
-3. 将 `Arkpets Desktop Pets.app` 拖进 `Applications`（应用程序）文件夹。
-4. 弹出 DMG，然后从“应用程序”打开 Arkpets。
-5. 当前版本尚未使用 Apple Developer 证书签名和公证。首次启动若被阻止，请在 Finder 中按住 Control 点击应用（或右键应用）→“打开”→再次确认“打开”；也可前往“系统设置 → 隐私与安全性”选择“仍要打开”。
-6. 仅在文件来自上述正式下载页且 SHA-256 与 Release 页面一致时允许打开。
-7. 退出方法：右键桌宠 →“退出桌宠”，或按 `Command + Q`。
-
-Mac 校验 SHA-256（终端）：
-
-```bash
-shasum -a 256 ~/Downloads/Arkpets*.dmg
-```
-
-未签名版本被 macOS 阻止是预期现象，并不表示需要安装额外软件。未来若提供已签名和 Apple 公证的版本，建议优先下载签名版。
 
 ## 基本操作
 
@@ -80,7 +58,7 @@ shasum -a 256 ~/Downloads/Arkpets*.dmg
 
 不需要。ChatGPT/Codex 只参与了开发过程，不是软件运行依赖。
 
-### 为什么别人导入的角色没有跟着 EXE/DMG 一起出现？
+### 为什么别人导入的角色没有跟着 EXE 一起出现？
 
 用户后续导入的素材保存在各自电脑的应用数据目录，不会写回安装包。分享自定义角色时，
 需要另外分享五个基础 WebM，以及该角色拥有时的 Special 文件。
@@ -88,11 +66,6 @@ shasum -a 256 ~/Downloads/Arkpets*.dmg
 ### 双击为什么没有 Special？
 
 只有素材库中包含 `Special.webm` 的角色才支持；其他角色仍按单击 Interact 使用。
-
-### Mac 打不开怎么办？
-
-先确认系统至少为 macOS 12、下载架构正确、文件来自正式发布页并且 SHA-256 一致。
-按照“macOS 安装”中的右键打开方法操作；若仍被 Gatekeeper 拦截，请将系统版本、芯片、文件名和提示截图反馈给作者。
 
 ## 同人项目声明
 

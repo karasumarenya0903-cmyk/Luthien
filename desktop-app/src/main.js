@@ -28,33 +28,6 @@ if (process.env.ARKPETS_QA_USER_DATA) {
   app.setPath("userData", path.resolve(process.env.ARKPETS_QA_USER_DATA));
 }
 
-function setMacDockVisible(visible) {
-  if (process.platform !== "darwin" || !app.dock) return;
-  if (visible) app.dock.show();
-  else app.dock.hide();
-}
-
-function configureMacApplicationMenu() {
-  if (process.platform !== "darwin") return;
-  const menu = Menu.buildFromTemplate([
-    {
-      label: app.name,
-      submenu: [
-        { role: "about" },
-        { type: "separator" },
-        { role: "hide" },
-        { role: "hideOthers" },
-        { role: "unhide" },
-        { type: "separator" },
-        { role: "quit" }
-      ]
-    },
-    { role: "editMenu" },
-    { role: "windowMenu" }
-  ]);
-  Menu.setApplicationMenu(menu);
-}
-
 function libraryRoot() {
   if (process.env.ARKPETS_LIBRARY_ROOT) {
     return path.resolve(process.env.ARKPETS_LIBRARY_ROOT);
@@ -352,7 +325,6 @@ function initialWindowPosition(width, height) {
 }
 
 function createPetWindow(petId) {
-  setMacDockVisible(false);
   petConfig = loadPetConfig(petId);
   activePetId = petId;
   activeMode = petConfig.initialMode;
@@ -401,13 +373,10 @@ function createPetWindow(petId) {
 
 function createSelectorWindow(closePet = false) {
   if (selectorWindow && !selectorWindow.isDestroyed()) {
-    setMacDockVisible(true);
     selectorWindow.show();
     selectorWindow.focus();
     return;
   }
-
-  setMacDockVisible(true);
 
   selectorWindow = new BrowserWindow({
     width: 720,
@@ -628,7 +597,6 @@ if (!app.requestSingleInstanceLock()) {
   });
 
   app.whenReady().then(() => {
-    configureMacApplicationMenu();
     petCatalog = loadCatalog();
     registerIpc();
     const qaPetId = process.env.ARKPETS_QA_PET_ID;

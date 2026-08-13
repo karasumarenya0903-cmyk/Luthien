@@ -128,17 +128,3 @@ test("window position stays inside the display work area", () => {
   );
   assert.deepEqual(clamped, { x: 1500, y: 0 });
 });
-
-test("macOS uses a native application menu and dock-aware pet windows", () => {
-  const mainJs = fs.readFileSync(path.resolve(__dirname, "..", "src", "main.js"), "utf8");
-  const packageJson = JSON.parse(
-    fs.readFileSync(path.resolve(__dirname, "..", "package.json"), "utf8")
-  );
-  assert.match(mainJs, /process\.platform !== "darwin"/);
-  assert.match(mainJs, /app\.dock\.show\(\)/);
-  assert.match(mainJs, /app\.dock\.hide\(\)/);
-  assert.match(mainJs, /Menu\.setApplicationMenu\(menu\)/);
-  assert.equal(packageJson.build.mac.minimumSystemVersion, "12.0");
-  assert.deepEqual(packageJson.build.mac.target[0].arch, ["x64", "arm64"]);
-  assert.equal(packageJson.build.mac.notarize, true);
-});

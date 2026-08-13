@@ -1,7 +1,7 @@
 {
   "name": "arkpets-desktop-pets",
   "version": "3.2.0",
-  "description": "A multi-pet transparent Windows and macOS desktop companion.",
+  "description": "A multi-pet transparent Windows desktop companion.",
   "main": "src/main.js",
   "author": "Arkpets",
   "license": "UNLICENSED",
@@ -13,10 +13,7 @@
     "verify:assets": "node scripts/verify-assets.js",
     "verify:media": "electron scripts/media-qa-main.js",
     "dist": "pnpm run dist:win",
-    "dist:win": "pnpm run verify:assets && pnpm run test && electron-builder --win portable",
-    "dist:mac": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --x64 --arm64",
-    "dist:mac:arm64": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --arm64",
-    "dist:mac:x64": "pnpm run verify:assets && pnpm run test && electron-builder --mac dmg zip --x64"
+    "dist:win": "pnpm run verify:assets && pnpm run test && electron-builder --win portable"
   },
   "build": {
     "appId": "com.arkpets.desktop-pets",
@@ -52,31 +49,6 @@
         }
       ],
       "artifactName": "${productName}.${ext}"
-    },
-    "mac": {
-      "target": [
-        {
-          "target": "dmg",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        },
-        {
-          "target": "zip",
-          "arch": [
-            "x64",
-            "arm64"
-          ]
-        }
-      ],
-      "artifactName": "${productName}-${version}-macOS-${arch}.${ext}",
-      "category": "public.app-category.entertainment",
-      "minimumSystemVersion": "12.0",
-      "hardenedRuntime": true,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.inherit.plist",
-      "notarize": true
     }
   },
   "devDependencies": {

@@ -1,6 +1,6 @@
 # Arkpets Desktop Pets
 
-一个可容纳多个透明 WebM 桌宠的 Windows/macOS 启动器。启动后先选择角色；桌宠运行时可通过右键菜单切换另一只宠物。
+一个可容纳多个透明 WebM 桌宠的 Windows 启动器。启动后先选择角色；桌宠运行时可通过右键菜单切换另一只宠物。
 
 ## 当前角色
 
@@ -38,13 +38,7 @@
 
 ## 分享
 
-内置的 Angelina、Lemuen 和 Amiya 已封装在对应平台安装包中。Windows 用户使用便携 EXE；
-Mac 用户根据芯片使用 arm64 或 x64 DMG。用户后来导入的桌宠保存在本机应用数据中，
+内置的 Angelina、Lemuen 和 Amiya 已封装在 Windows 便携 EXE 中。用户后来导入的桌宠保存在本机应用数据中，
 不会自动写回安装包；分享自定义桌宠时还需同时分享五个基础 WebM，以及可选的 Special。
-
-## macOS 构建
-
-Mac 版要求 macOS 12 或更高版本，分别为 Apple Silicon `arm64` 和 Intel `x64` 生成 DMG/ZIP。
-构建、签名、公证及 GitHub Actions 使用方法见 [MACOS-BUILD.md](MACOS-BUILD.md)。
 
 面向用户的宣传文案和下载教程位于项目的 `release/` 文件夹。
