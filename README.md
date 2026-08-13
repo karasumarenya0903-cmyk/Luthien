@@ -4,10 +4,13 @@
 
 ## 下载与运行
 
-普通用户无需安装 ChatGPT、Codex、Node.js 或其他开发工具。请前往本仓库的 **Releases** 页面下载对应系统的安装包：
+普通用户无需安装 ChatGPT、Codex、Node.js，也不需要 OpenAI 账号或 API Key。请前往本仓库的 [**Releases**](https://github.com/karasumarenya0903-cmyk/Luthien/releases/latest) 页面下载对应系统的安装包：
 
-- Windows：下载 `Arkpets Desktop Pets.exe`，双击运行。
-- macOS：根据电脑芯片下载 `arm64`（Apple Silicon）或 `x64`（Intel）的 DMG。
+- Windows 64 位：下载 `Arkpets.Desktop.Pets.exe`，双击即可运行，无需安装。
+- Apple Silicon Mac：下载文件名包含 `macOS-arm64.dmg` 的版本。
+- Intel Mac：下载文件名包含 `macOS-x64.dmg` 的版本。
+
+当前 macOS 版本尚未经过 Apple 签名和公证。首次运行时，请在 Finder 中右键应用并选择“打开”，或前往“系统设置 → 隐私与安全性”允许打开。
 
 更完整的中文下载说明见 [`release/DOWNLOAD-GUIDE.zh-CN.md`](release/DOWNLOAD-GUIDE.zh-CN.md)。
 
@@ -38,4 +41,3 @@ Windows 打包：`pnpm run dist:win`。macOS 构建、签名和公证说明见 [
 ## 素材与授权提示
 
 本项目自身标记为 `UNLICENSED`。角色名称、形象及素材的权利归其各自权利人所有；公开分发或商业使用前，请确保你拥有相应素材的使用与再分发许可。
-

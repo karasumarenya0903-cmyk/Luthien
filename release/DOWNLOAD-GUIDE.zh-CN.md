@@ -2,7 +2,9 @@
 
 ## 下载前先看
 
-Arkpets 是独立桌面程序，不需要安装 ChatGPT、Codex、Node.js，也不需要 OpenAI 账号或 API Key。
+Arkpets 是独立桌面程序，不需要安装 ChatGPT、Codex、Node.js 或其他开发工具，也不需要 OpenAI 账号或 API Key。
+
+正式下载页：[GitHub Releases](https://github.com/karasumarenya0903-cmyk/Luthien/releases/latest)
 
 请只从作者的正式发布页下载，并核对该版本公布的 SHA-256。不同平台的文件不能混用：
 
@@ -15,7 +17,7 @@ Mac 用户可点击左上角苹果图标 →“关于本机”：显示“芯片
 
 ## Windows 安装
 
-1. 下载 `Arkpets Desktop Pets.exe`。
+1. 下载 `Arkpets.Desktop.Pets.exe`。
 2. 它是便携版，无需安装；将文件放进一个固定文件夹后双击运行。
 3. 在选择器中点击角色即可启动桌宠。
 4. 如果 Windows SmartScreen 出现提示，请先确认文件来自正式发布页并核对 SHA-256；确认一致后，
@@ -25,7 +27,7 @@ Mac 用户可点击左上角苹果图标 →“关于本机”：显示“芯片
 Windows 校验 SHA-256（PowerShell）：
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath "C:\下载位置\Arkpets Desktop Pets.exe"
+Get-FileHash -Algorithm SHA256 -LiteralPath "C:\下载位置\Arkpets.Desktop.Pets.exe"
 ```
 
 ## macOS 安装
@@ -34,8 +36,9 @@ Get-FileHash -Algorithm SHA256 -LiteralPath "C:\下载位置\Arkpets Desktop Pet
 2. 双击打开 DMG。
 3. 将 `Arkpets Desktop Pets.app` 拖进 `Applications`（应用程序）文件夹。
 4. 弹出 DMG，然后从“应用程序”打开 Arkpets。
-5. 第一次启动时，macOS 会确认这是从互联网下载的应用；签名并经过 Apple 公证的正式版可以正常确认打开。
-6. 退出方法：右键桌宠 →“退出桌宠”，或按 `Command + Q`。
+5. 当前版本尚未使用 Apple Developer 证书签名和公证。首次启动若被阻止，请在 Finder 中按住 Control 点击应用（或右键应用）→“打开”→再次确认“打开”；也可前往“系统设置 → 隐私与安全性”选择“仍要打开”。
+6. 仅在文件来自上述正式下载页且 SHA-256 与 Release 页面一致时允许打开。
+7. 退出方法：右键桌宠 →“退出桌宠”，或按 `Command + Q`。
 
 Mac 校验 SHA-256（终端）：
 
@@ -43,9 +46,7 @@ Mac 校验 SHA-256（终端）：
 shasum -a 256 ~/Downloads/Arkpets*.dmg
 ```
 
-如果测试版尚未签名，macOS 可能阻止启动。仅在文件来自你确认可信的正式测试页且 SHA-256 一致时，
-可以在 Finder 中按住 Control 点击应用 →“打开”；或前往“系统设置 → 隐私与安全性”查看“仍要打开”。
-正式公开发布建议下载已签名和 Apple 公证的版本。
+未签名版本被 macOS 阻止是预期现象，并不表示需要安装额外软件。未来若提供已签名和 Apple 公证的版本，建议优先下载签名版。
 
 ## 基本操作
 
@@ -91,7 +92,7 @@ shasum -a 256 ~/Downloads/Arkpets*.dmg
 ### Mac 打不开怎么办？
 
 先确认系统至少为 macOS 12、下载架构正确、文件来自正式发布页并且 SHA-256 一致。
-如果正式签名版仍被 Gatekeeper 拦截，请将系统版本、芯片、文件名和提示截图反馈给作者。
+按照“macOS 安装”中的右键打开方法操作；若仍被 Gatekeeper 拦截，请将系统版本、芯片、文件名和提示截图反馈给作者。
 
 ## 同人项目声明
 
