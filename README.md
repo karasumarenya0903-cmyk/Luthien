@@ -33,7 +33,9 @@ Arkpets是一个支持明日方舟多角色的 Windows 桌宠程序。内置桌�
 
 - 用户可以在游戏端外摸摸自己喜欢的干员进行互动，无需 Miss.Christine 的摸摸券。
 - 可以让干员陪着自己办公，比如累得要死的时候可以躺板板。
+
 <img width="1306" height="602" alt="224136d8dd9b26b61e3d21673162f370" src="https://github.com/user-attachments/assets/bd3b2569-8fdb-4aca-b546-14376c226232" />
+
 - 可以在桌面上体验奇象巡展的轮椅竞速、电瓶车、跺脚、随地大小坐……还可以高速飙车。
 
 ## 本地开发
