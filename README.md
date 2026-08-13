@@ -1,4 +1,4 @@
-<img width="1508" height="996" alt="image" src="https://github.com/user-attachments/assets/72639b21-5dcb-4a00-a384-5bd883e77e08" /># Luthien / Arkpets Desktop Pets
+# Luthien / Arkpets Desktop Pets
 
 一个支持明日方舟多角色的 Windows 桌宠程序。内置桌宠干员包括初始的予愿安洁莉娜、蕾缪安和阿米娅·见习联结者，用户也可自行导入自己喜欢的干员当桌宠。
 
@@ -25,7 +25,7 @@
 
 以予愿安洁莉娜为例，在“干员模型”中选择“基建”模型组，下载 `Relax`、`Interact`、`Sit`、`Sleep`、`Move` 的五个 WebM 文件；若下载的是某干员的时装模型，可以选择多下载一个名为`Special`的 WebM 文件，无需重命名文件。
 
-![Uploading image.png…]()
+<img width="1508" height="996" alt="image" src="https://github.com/user-attachments/assets/72639b21-5dcb-4a00-a384-5bd883e77e08" />
 
 导入时需要选择文件名中分别包含 `Relax`、`Interact`、`Sit`、`Sleep`、`Move` 的五个 WebM 文件；`Special` 为可选文件。用户导入的干员可以在选择面板中删除，内置干员不可删除。
 
